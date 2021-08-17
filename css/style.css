@@ -1,0 +1,179 @@
+body {
+  background-color: #2E3047;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.sign-form {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 65vh;
+  overflow: hidden;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+section.sign-form h1 {
+  color: #3BBA9C;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+section.sign-form form {
+  width: 500px;
+  max-height: 60vh;
+  margin: auto;
+}
+
+section.sign-form form input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin: 20px 0px;
+  padding: 5px;
+  font-size: 1.25em;
+  line-height: 20px;
+  border-radius: 6px;
+  outline: none;
+}
+
+section.sign-form form button {
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+section.sign-form form button[type="submit"] {
+  background-color: #5dcbb1;
+  color: #2E3047;
+  font-size: 20px;
+}
+
+section.sign-form form button[type="button"] {
+  background-color: transparent;
+  color: #aae4d6;
+  font-size: 16px;
+}
+
+section.sign-form.close {
+  height: 0vh;
+}
+
+section#line-img {
+  width: 100%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+section#line-img.signin {
+  -webkit-animation-name: changeBackgroundToSignin;
+          animation-name: changeBackgroundToSignin;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  background-image: url("../img/signin.png");
+}
+
+section#line-img.signup {
+  -webkit-animation-name: changeBackgroundToSignup;
+          animation-name: changeBackgroundToSignup;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  background-image: url("../img/signup.png");
+}
+
+@-webkit-keyframes changeBackgroundToSignin {
+  0% {
+    background-size: auto 100%;
+    background-image: url("../img/signup.png");
+  }
+  49% {
+    background-image: url("../img/signup.png");
+  }
+  50% {
+    background-size: auto 0%;
+    background-image: url("../img/signin.png");
+  }
+  100% {
+    background-size: auto 100%;
+  }
+}
+
+@keyframes changeBackgroundToSignin {
+  0% {
+    background-size: auto 100%;
+    background-image: url("../img/signup.png");
+  }
+  49% {
+    background-image: url("../img/signup.png");
+  }
+  50% {
+    background-size: auto 0%;
+    background-image: url("../img/signin.png");
+  }
+  100% {
+    background-size: auto 100%;
+  }
+}
+
+@-webkit-keyframes changeBackgroundToSignup {
+  0% {
+    background-size: auto 100%;
+    background-image: url("../img/signin.png");
+  }
+  49% {
+    background-image: url("../img/signin.png");
+  }
+  50% {
+    background-size: auto 0%;
+    background-image: url("../img/signup.png");
+  }
+  100% {
+    background-size: auto 100%;
+  }
+}
+
+@keyframes changeBackgroundToSignup {
+  0% {
+    background-size: auto 100%;
+    background-image: url("../img/signin.png");
+  }
+  49% {
+    background-image: url("../img/signin.png");
+  }
+  50% {
+    background-size: auto 0%;
+    background-image: url("../img/signup.png");
+  }
+  100% {
+    background-size: auto 100%;
+  }
+}

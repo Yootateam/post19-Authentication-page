@@ -1,0 +1,113 @@
+$YootaBlack : #2E3047;
+$YootaGreen : #3BBA9C;
+$font-family : Arial, Helvetica, sans-serif;
+$main-font-size : 16px;
+
+body{
+  background-color: $YootaBlack;
+  font-size: $main-font-size;
+  font-family:$font-family;
+}
+main{
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+}
+section.sign-form{
+  display: grid;
+  place-items: center;
+  height: 65vh;
+  overflow: hidden;
+  transition: 2s;
+  h1{
+    color: $YootaGreen;
+    font-family: $font-family;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  form{
+    width: 500px; max-height: 60vh;
+    margin:  auto;
+    input{
+      display: block;
+      width: 100%; height: 30px;
+      margin: 20px 0px;
+      padding: 5px;
+      font-size: 1.25em;
+      line-height:20px;
+      border-radius: 6px;
+      outline: none;
+    }
+    button{
+      cursor: pointer;
+      width: 120px; height: 50px;
+      border-radius: 6px;
+      border: none; outline: none;
+    }
+    button[type="submit"]{
+      background-color:lighten( $YootaGreen, 10%);
+      color: #2E3047;
+      font-size: 20px;
+    }
+    button[type="button"]{
+      background-color:transparent;
+      color: lighten( $YootaGreen, 30%);
+      font-size: 16px;
+    }
+  }
+  &.close{
+    height:0vh;
+  }
+}
+section#line-img{
+  width: 100%; height: 35vh;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  &.signin{
+    animation-name: changeBackgroundToSignin;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    background-image: url("../img/signin.png");
+  }
+  &.signup{
+    animation-name: changeBackgroundToSignup;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    background-image: url("../img/signup.png");
+  }
+}
+@keyframes changeBackgroundToSignin {
+0%   {
+  background-size: auto 100%;
+  background-image: url("../img/signup.png");
+}
+49%{
+  background-image: url("../img/signup.png");
+}
+50%  {
+  background-size: auto 0%;
+  background-image: url("../img/signin.png");
+}
+100% {background-size: auto 100%;}
+}
+
+@keyframes changeBackgroundToSignup {
+0%   {
+  background-size: auto 100%;
+  background-image: url("../img/signin.png");
+}
+49%{
+  background-image: url("../img/signin.png");
+}
+50%  {
+  background-size: auto 0%;
+  background-image: url("../img/signup.png");
+}
+100% {background-size: auto 100%;}
+}
